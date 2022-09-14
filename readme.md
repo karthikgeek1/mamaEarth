@@ -12,12 +12,12 @@
 
 <h3> Table of Contents  -:</h3>
 <p> 
-1 - Navbar
-2-  6 Diffrent Html Pages
-3 - Add to Cart Feature
-4 - Search Value
-5 - LogIn/ SignUp
-6 - Footer
+1 - Navbar <br>
+2-  Six Diffrent Html Pages<br>
+3 - Add to Cart Feature<br>
+4 - Search Value<br>
+5 - LogIn/ SignUp<br>
+6 - Footer<br>
 
 etc..
 
