@@ -66,7 +66,7 @@ window.addEventListener("DOMContentLoaded", () => {
               (5 * parseInt(item.avg_rating_percent)) / 100
             }<span> | ${item.review_count} reviews<span></p>
             <p> Rs.${item.price}</p>
-            <button id=${item.id} class="butn">Add to cart</button>
+            <button id="cart_${item.id}" class="butn" onclick="add_to_cart(event)">Add to cart</button>
         </div>`;
         container.innerHTML += productItem;
       });
@@ -285,8 +285,22 @@ function isUserLoggedIn(){
   //   console.log("WOrkin");
   // }
 
+  // ================================================cart============================================
+// let cartItems=[]
+//   function add_to_cart(e){
+//     console.log("cart id", e.target.id);
+//     fetch("https://mmrth-nd-api.honasa-production.net/v1/categories/31/products").then(res=>res.json())
+//     .then(data=>data.bestsellers.map((item)=>{
+//       let idValue = item.id
+//       // console.log(idValue);
+//       if(e.target.id.includes(idValue)){
+//         cartItems.push(item)
+//         localStorage.setItem("cartitems", JSON.stringify(cartItems))
+//       }
+//     }))
+//   }
 
-  // ===============================details section =======================================//
+  // ===============================details section =======================================/
 
 let details =[]
 if(localStorage.getItem('detailsPage')){
@@ -306,4 +320,35 @@ function display(e){
       window.location.href="/details/index.html"
     }
   }))
+}
+
+// ================search====================
+function movieSearch(){
+  let inputvalue = document.querySelector('.input').value;
+// console.log(inputvalue)
+  fetch("https://mmrth-nd-api.honasa-production.net/v1/categories/31/products")
+    .then((res) => res.json())
+    .then((data) => {
+      // console.log(data);
+      let filterData = data.bestsellers.filter((item)=>{
+        // console.log(item)
+        if(item.name.toLowerCase().includes(inputvalue.toLowerCase()))
+          return item
+      })
+      console.log(filterData)
+      container.innerHTML="";
+      filterData.map((item)=> {
+        container.innerHTML+=`<div class="c1">
+        <div class="logo">Best seller</div>
+        <img src=${item.images[0]} alt="mamaearth" class="img2">
+        <p>${item.name}</p>
+        <p class="para"><i class="fa-solid fa-star rate"></i><span>${(5 * parseInt(item.avg_rating_percent)) / 100} | ${item.review_count}<span></p>
+        <p> Rs.${item.price}</p>
+        <button id=${item.id} class="butn">Add to cart</button>
+    </div>`;
+      })
+
+      
+  }).catch(err=>alert("item not found"))
+  
 }

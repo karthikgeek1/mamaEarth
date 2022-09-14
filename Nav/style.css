@@ -373,6 +373,14 @@ p {
 .filters {
   margin-left: 20px;
 }
+.icon a{
+  text-decoration: none;
+  color: rgb(0, 175, 239);;
+}
+.icon a label{
+  color: rgb(113, 110, 110);
+  text-decoration: none;
+}
 .all {
   background-color: white;
   width: 50px;

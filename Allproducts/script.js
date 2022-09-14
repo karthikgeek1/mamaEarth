@@ -140,7 +140,7 @@ function createProdItemCard(data) {
 let details=[]
 async function display(e){
     if(e.target.classList.contains('img2')){
-        let productData = await getProductData(31)
+        let productData = await getProductData(21)
         productData.bestsellers.map((item)=>{
         let idVal = item.id
           // details=null
