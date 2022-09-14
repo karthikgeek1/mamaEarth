@@ -26,8 +26,8 @@
                     <input type="text" id="Email" placeholder="email">
                     <input type="text" id="Address" placeholder="Address">
                 </div>
-                <button class="butn">submit</button>
             </form>
+            <button class="butn">submit</button>
         </div>
         <div class="subcont2">
             <!-- <div class="mini">
@@ -41,9 +41,14 @@
     <button class="bill"></button>
     <script>
         let cart = JSON.parse(localStorage.getItem('cartCheckout'))
+        let fname = document.getElementById("fname")
+        let lname = document.getElementById("lname")
+        let email = document.getElementById("Email")
+        let address = document.getElementById("address")
         console.log(cart)
         let sub = document.querySelector(".subcont2")
         let bill = document.querySelector(".bill")
+        let submit = document.querySelector(".butn")
         cart.map((item) => {
             html=`<div class="mini">
                 <img src=${item.images[0]} alt="">
@@ -58,8 +63,19 @@
             total+=parseInt(cart[i].price)
         }
         console.log(total)
-        bill.innerHTML=`Total bill: ${total}`
+        bill.innerHTML=`Total bill: $${total}`
         cart=null
+        bill.addEventListener("click",()=>{
+            alert(`paid the bill ${total}`)
+        })
+        submit.addEventListener("click", (e)=>{
+            //e.preventDefault()
+            if(fname.value==""||lname.value==""||email.value==""||address.value==""){
+                alert("please enter your details properly")
+            }
+                alert("pay the bill")
+        
+        })
     </script>
 </body>
 
