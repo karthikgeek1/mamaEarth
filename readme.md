@@ -27,5 +27,3 @@ etc..
 <p> We Get a Big Support By Our Mentors & Our Team , Where we stuck our mentors are there with us and keep eye on our project. A big thanks to them </p>
 
 <h3> Output -:</h3>
-
-![alt text](</Output/image%20(1).png>)
