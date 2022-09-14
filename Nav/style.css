@@ -705,7 +705,7 @@ p {
 }
 
 .cart_data {
-  height: 100px;
+  height: 120px;
   width: 400px;
   display: flex;
   border-bottom: 1px solid black;
@@ -723,10 +723,11 @@ p {
 }
 
 .price_name {
-  font-size: smaller;
+  /* font-size: smaller; */
   position: relative;
   top: 70px;
-  right: 20px;
+  right: 10px;
+  font-weight: bolder;
 }
 
 /* ================================footer css======================================= */
