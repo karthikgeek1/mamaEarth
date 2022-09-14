@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+.img-cont{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 50vw;
+    justify-content: space-around;
+    align-items: center;
+    justify-content: center;
+}
+.img-cont .big-img img{
+    height: 400px;
+    width: 400px;
+    border: 1px solid black;
+    margin-top: 70px;
+    border-radius: 5px;
+}
+.small-img{
+    display: flex;
+    height: 200px;
+    width: 400px;
+    justify-content: space-around;
+}
+.small-img .sm-1 img{
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+.small-img .sm-2 img{
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+.small-img .sm-3 img{
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+.detailsCont{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: space-around;
+}
+.details-sub{
+    height: 100vh;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+    justify-items: center;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+}
+  .rate {
+    color: gold;
+   }
+  .butn {
+    height: 50px;
+    width: 250px;
+    border: 2px solid rgb(13, 175, 228);
+    color: rgb(13, 175, 228);
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: transparent;
+    font-size: 15px;
+    border-radius: 0px 0px 5px 5px;
+    transition-duration: 1s;
+    transition-delay: 0.1s;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  .butn:hover {
+    color: white;
+    background-color: rgb(13, 175, 228);
+  }
+  .logo-mama{
+    text-align: center;
+  }
+  .sm-1 img:hover{
+    border: 2px solid black;
+  }
+  .sm-2 img:hover{
+    border: 2px solid black;
+  }
+  .sm-3 img:hover{
+    border: 2px solid black;
+  }
+  .big-img img:hover{
+    border: 2px solid black;
+  }

@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="store.css">
+    <script src="https://kit.fontawesome.com/10255ec4b4.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- =======================================header====================================== -->
+    <header>
+
+        <!-- Nav Part One---------------------------- -->
+        <nav class="nav1">
+            <div>
+                <a href="">Asia's 1st Brand with MADE SAFE Certified Products<a>
+            </div>
+            <div>
+                <a href="">Get 3 Bestsellers FREE on Orders Above Rs. 499 Today | Use Code - BEST3 | Shop Now</a>
+            </div>
+            <div>
+                <a href=""><i class="fa-solid fa-users"></i></a>
+            </div>
+            </ul>
+        </nav>
+
+
+        <!-- Nav Part Two------------------------------------ -->
+
+
+
+        <nav class="nav2">
+            <div>
+                <img src="https://mamaearthp.imgix.net/wysiwyg/mamaearth-logo.png?auto=format&fit=scale" alt="Error" class="logo1">
+            </div>
+            <div class="serach">
+                <i class="fa-solid fa-magnifying-glass" id="glass"></i>
+                <input type="text" placeholder="Search For Face Mask " class="input">
+                <button class="btn"><i class="fa-solid fa-magnifying-glass" id="magnify"></i>Search</button>
+            </div>
+            <div>
+                <img src="https://mamaearth-production.imgix.net/vip-desktop-join.gif" alt="" class="forest">
+            </div>
+            <div class="icon">
+                <i class="fa-solid fa-cart-arrow-down" id="icon"></i> <label>Cart</label>
+            </div>
+            <div class="icon">
+                <i class="fa-regular fa-circle-user" id="icon"></i> <label onmouseover="toggleMenu()">Login</label>
+            </div>
+
+
+
+            <!-- --------hover------------------------   -->
+
+
+            <div class="sub-menu-wrap" id="subMenu">
+                <div class="sub-menu">
+                    <div class="user-info" onmouseleave="toggleMenu()">
+                        <li> <i class="fa-regular fa-user" id="popup"></i> &nbsp; Your Profile </li>
+                        <hr>
+                        <li><i class="fa-solid fa-cart-shopping" id="popup"></i> &nbsp;Your Orders</li>
+                        <hr>
+                        <li class="third"><i class="fa-solid fa-gift" id="popup"> </i>
+                            <h3 class="good"> <span class="goodness">gôodness</span> <span class="insider">ìnsider</span> </h3> <br><span class="order">Something New
+                                Orders</span>
+                        </li>
+                        <hr>
+                        <li><i class="fa-solid fa-location-dot" id="popup"></i> &nbsp; Manage Address</li>
+                        <hr>
+                        <li><i class="fa-solid fa-phone" id="popup"></i> &nbsp;Contact US</li>
+                        <hr>
+                        <li><button class="logbut">LOGIN</button></li>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <nav>
+        <div class="nav" onmouseleave="babyDataRemove()">
+            <div class="menu">
+                <a href="/Nav/index.html">HOME</a>
+                <div class="baby" style="display: inline-block;" onmouseenter="babyData()" >
+                    <a href="" id="baby">BABY</a>
+                    <div class="baby-modal display-none" onmouseleave="babyDataRemove()">
+                        <div class="left">
+                            <a href="" style="color: black; font-size: 17px;">Explore</a>
+                            <a href="">New Launches</a>
+                            <a href="">Best Seller</a>
+                            <a href="">Combos</a>
+                            <a href="">Gift Packs</a>
+                        </div>
+                        <div class="center">
+                            <a href="" style="color: black; font-size: 17px;">Baby</a>
+                            <a href="">Baby Sampoo</a>
+                            <a href="">Baby Oralcare</a>
+                            <a href="">Baby Skin</a>
+                            <a href="">Baby Oil</a>
+                            <a href="">Baby Bath</a>
+                        </div>
+                        <div class="right">
+                            <a href="">See All</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="beauty" style="display: inline-block;" onmouseenter="beautyData()">
+                    <a href="#">BEAUTY</a>
+                    <div class="baby-modal beauty-display-none" onmouseleave="babyDataRemove()">
+                        <div class="left">
+                            <a href="" style="color: black; font-size: 17px;">Explore</a>
+                            <a href="">New Launches</a>
+                            <a href="">Best Seller</a>
+                            <a href="">Combos</a>
+                            <a href="">Gift Packs</a>
+                        </div>
+                        <div class="center">
+                            <a href="" style="color: black; font-size: 17px;">Beauty</a>
+                            <a href="">Face</a>
+                            <a href="">Hair</a>
+                            <a href="">Body</a>
+
+                        </div>
+                        <div class="right">
+                            <a href="">See All</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="beauty" style="display: inline-block;" onmouseenter="hairData()">
+                    <a href="#">HAIR</a>
+                    <div class="baby-modal hair-display-none" onmouseleave="babyDataRemove()">
+                        <div class="left">
+                            <a href="" style="color: black; font-size: 17px;">Explore</a>
+                            <a href="">New Launches</a>
+                            <a href="">Best Seller</a>
+                            <a href="">Combos</a>
+                            <a href="">Gift Packs</a>
+                        </div>
+                        <div class="center">
+                            <a href="" style="color: black; font-size: 17px;">Hair</a>
+                            <a href="">Hair Sampoo</a>
+                            <a href="">Hair Conditioner</a>
+                            <a href="">Hair Oil</a>
+                            <a href="">Hair Mask</a>
+                            <a href="">Hair Serum</a>
+
+                        </div>
+                        <div class="right">
+                            <a href="">See All</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="face" style="display: inline-block;" onmouseenter="faceData()">
+                    <a href="#">FACE</a>
+                    <div class="baby-modal face-display-none" onmouseleave="babyDataRemove()">
+                        <div class="left">
+                            <a href="" style="color: black; font-size: 17px;">Explore</a>
+                            <a href="">New Launches</a>
+                            <a href="">Best Seller</a>
+                            <a href="">Combos</a>
+                            <a href="">Gift Packs</a>
+                        </div>
+                        <div class="center">
+                            <a href="" style="color: black; font-size: 17px;">Face</a>
+                            <a href="">Face Wash</a>
+                            <a href="">Face Mask</a>
+                            <a href="">Face Cream</a>
+                            <a href="">Face Serum</a>
+                            <a href="">Facr Scrub</a>
+                            <a href="">Face Toner</a>
+                            <a href="">Face Gel</a>
+                            <a href="">Face Sheet Mask</a>
+                            <a href="">Face Moisturiser</a>
+                        </div>
+                        <div class="right">
+                            <a href="">See All</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="body" style="display: inline-block;" onmouseenter="bodyShowData()">
+                    <a href="#">BODY</a>
+                    <div class="baby-modal body-display-none" onmouseleave="babyDataRemove()">
+                        <div class="left">
+                            <a href="" style="color: black; font-size: 17px;">Explore</a>
+                            <a href="">New Launches</a>
+                            <a href="">Best Seller</a>
+                            <a href="">Combos</a>
+                            <a href="">Gift Packs</a>
+                        </div>
+                        <div class="center">
+                            <a href="" style="color: black; font-size: 17px;">Body</a>
+                            <a href="">Body Wash</a>
+                            <a href="">Body Scrub</a>
+                            <a href="">Face Cream</a>
+                            <a href="">Face Lotion</a>      
+                        </div>
+                        <div class="right">
+                            <a href="">See All</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="/gift/gift.html">GIFT PACKS</a>
+                <a href="/Allproducts/Allproducts.html">ALL PRODUCTS</a>
+                <a href="/Blog/index.html">BLOG</a>
+                <a href="/Plant Goodness/index.html">PLANT GOODNESS</a>
+                <a href="/store/store.html">STORE LOCATOR</a>
+            </div>
+        </div>
+    </nav>
+    </header>
+    <section>
+        <ul class="ul">
+            <li>Gurgoan</li>
+            <li>Noida</li>
+            <li>Chandigarh</li>
+            <li>Mumbai</li>
+        </ul>
+        <div class="product">
+            <div class="gurgoan " data-filter="gurgoan" id="city">
+                <h3>Ardee Mall</h3>
+                <p><i class="fa-solid fa-location-dot"></i> &nbsp; Shop Number B-8, Ground Floor, Ardee Mall Sec-52, Gurgaon, Haryana, 122011</p>
+                <p><i class="fa-solid fa-clock"></i> &nbsp; 11:00 AM - 11:00 PM</p>
+                <p><i class="fa-solid fa-phone"></i> &nbsp; 0124-448-8102 </p>
+                <p><i class="fa-regular fa-envelope"></i> &nbsp; ggn.ardee@mamaearth.in</p>
+                <button class="button">Get Direction</button>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7016.489101386753!2d77.07234902272165!3d28.442043563857638!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d18be1485fd9b%3A0xadfc99d2b06147c2!2sArdee%20Mall!5e0!3m2!1sen!2sin!4v1662545384426!5m2!1sen!2sin"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <hr>
+            </div>
+            <div class="noida" data-filter="noida" id="city">
+                <h3>DLF Mall of India</h3>
+                <p><i class="fa-solid fa-location-dot"></i> &nbsp;Unit No - 3K7A, Second Floor, Noida, Uttar Pradesh, 201304</p>
+                <p><i class="fa-solid fa-clock"></i> &nbsp;11:00 AM - 12:00 AM</p>
+                <p><i class="fa-solid fa-phone"></i> &nbsp;2246013579</p>
+                <p><i class="fa-regular fa-envelope"></i> &nbsp;noida.moi@mamaearth.in</p>
+                <button class="button">Get Direction</button>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56026.770709350225!2d77.3979369511063!3d28.639555979234107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cef6165728471%3A0xf027989e066991a4!2sGaur%20City%20Mall!5e0!3m2!1sen!2sin!4v1662545599108!5m2!1sen!2sin"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <hr>
+            </div>
+            <div class="mumbai" data-filter="mumbai" id="city">
+                <h3>Infiniti Malad</h3>
+                <p><i class="fa-solid fa-location-dot"></i> &nbsp;Shop Number SF229, Second Floor, Infiniti Malad Mall, Link Road Malad, West Mumbai, Mumbai, Maharashtra, 400053</p>
+                <p><i class="fa-solid fa-clock"></i> &nbsp;11:00 AM - 10:00 PM</p>
+                <p><i class="fa-solid fa-phone"></i> &nbsp;2246013579</p>
+                <button class="button">Get Direction</button>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30149.880781357915!2d72.81522563268061!3d19.16306950822068!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b6ee06ebad2b%3A0x9c288235c433657d!2sInfiniti%20Mall!5e0!3m2!1sen!2sin!4v1662585736288!5m2!1sen!2sin"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <hr>
+            </div>
+            <div class="chandigarh" data-filter="chandigarh" id="city">
+                <h3>Elante Mall</h3>
+                <p><i class="fa-solid fa-location-dot"></i> &nbsp;Unit No -KS2A, Second Floor, Plot No.178-178A, Industrial & Business Park, Phase-I, Chandigarh, Punjab, 160002</p>
+                <p><i class="fa-regular fa-envelope"></i> &nbsp;chd.elante@mamaearth.in</p>
+                <button class="button">Get Direction</button>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3430.459043685758!2d76.79713632695312!3d30.70549299999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fed10ffffffff%3A0xca3443e5d9ea4316!2sVFS%20Global%20Services%20Pvt.%20Ltd!5e0!3m2!1sen!2sin!4v1662585640181!5m2!1sen!2sin"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <hr>
+
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer">
+                <div class="footer-bowl">
+        
+                <!-- First row start from below -->
+          <div id="first-col">
+            <div class="shiping">
+                <img class="imgtruck" src="https://mamaearthp.imgix.net/wysiwyg/delivery2x.png?auto=format
+                " alt="#">
+                <h3 class="free-head">Free Shiping</h4>
+                <p class="mb-1">On Order Above Rs.399</p>
+            </div>
+        
+            <div class="cod-bowl">
+                <img class="imgtruck" src="https://mamaearthp.imgix.net/wysiwyg/Group_81512x.png?auto=format" alt="#">
+                <h3 class="cod-head">COD Available</h3>
+                <p class="mb-1">@ Rs.40 Per Order</p>
+            </div>
+        
+            <div class="contactus-bowl">
+                <h2>Have Queries or Concerns?</h2>
+                <button id="contact-btn" class="mb-1">CONTACT US</button>
+            </div>
+          </div>
+              <!--  Second row start from below -->
+        <div class="payment-certificate">
+              <div class="payment-bowl">
+                
+                <div class opetion-card>
+                    <h3 class="head">PAYMENT</h3> <br>
+                    <h4 class="head2"><span><img class="img1" src="https://mamaearthp.imgix.net/wysiwyg/noun_trusted_27146262x_6Ekja92.png?auto=format" alt="#"></span>100% Payment Protection, Easy Return Policy</h4>
+                    <img class="card" src="	https://mamaearthp.imgix.net/wysiwyg/master_card2x.png?auto=format&fit=scale" alt="#">
+                    <img class="card"src="	https://mamaearthp.imgix.net/wysiwyg/american_express2x.png?auto=format&fit=scale " alt="#">
+                    <img class="card"src="https://mamaearthp.imgix.net/wysiwyg/rupay2x.png?auto=format&fit=scale" alt="#">
+                    <img class="card" src="	https://mamaearthp.imgix.net/wysiwyg/net_banking2x.png?auto=format&fit=scale" alt="#">
+                    <img class="card"src="https://mamaearthp.imgix.net/wysiwyg/visa2x.png?auto=format&fit=scale" alt="#">
+                </div>
+              </div>
+        
+              <div class="certificate-bowl">
+                <div class="dermato">
+                    <img class="dermato-img" src="	https://mamaearthp.imgix.net/wysiwyg/dermatology-tested-100x1002x.png?auto=format " alt="#">
+                    <p class="dermato-p">Dermatologically Tested</p>
+                </div>
+        
+                <div class="fda">
+                    <img class="fda-img" src="https://mamaearthp.imgix.net/wysiwyg/fda-100x1002x.png?auto=format" alt="#">
+                    <p class="fda-p">FDA Approved</p>
+                </div>
+        
+                <div class="safe">
+                    <img class="safe-img" src="https://mamaearthp.imgix.net/wysiwyg/MadeSafeImages13Jan/madesafe13janlogo.png?auto=format" alt="#">
+                    <p class="safe-p">Made Safe Certified</p>
+                </div>
+        
+                <!-- <div class="cruelty">
+                    <img class="cruelty-img" src="https://mamaearthp.imgix.net/wysiwyg/cruelty-free_SjVJgQA.png?auto=format" alt="#">
+                    <p class="cruelty-p">Cruelty Free</p>
+                </div> -->
+              </div>
+            </div>
+            <!-- IMPROTANT link ROW start from below -->
+        
+            <div class="imp-link">
+        
+                <div class="useful-bowl">
+                    <h1 class="useful-head">USEFUL LINKS</h1>
+                    <ul>
+                        <li class="link-foot"><a href="#">Privacy Policy</a></li>
+                        <li class="link-foot"><a href="#">Returns</a></li>
+                        <li class="link-foot"><a href="#">Terms&Conditions</a></li>
+                        <li class="link-foot"><a href="#">Terms&Conditions-Cashback</a></li>
+                        <li class="link-foot"><a href="#">FAQs</a></li>
+                        <li class="link-foot"><a href="#">We're Safe</a></li>
+                        <li class="link-foot"><a href="#">Track Order</a></li>
+                        <li class="link-foot"><a href="#">Contact Us</a></li>
+                        <li class="link-foot"><a href="#">Sitemap</a></li>
+                        <li class="link-foot"><a href="#">About Us</a></li>
+                    </ul>
+                </div>
+        
+        
+                    <div class="category-bowl">
+                        <h1 class="useful-head">CATEGORIES</h1>
+                        <ul>
+                            <li class="link-foot"><a href="#">Baby</a></li>
+                            <li class="link-foot"><a href="#">Beauty</a></li>
+                            <li class="link-foot"><a href="#">Hair</a></li>
+                            <li class="link-foot"><a href="#">Face</a></li>
+                            <li class="link-foot"><a href="#">Body</a></li>
+                            <li class="link-foot"><a href="#">Gift Pack</a></li>
+                        </ul>
+                    </div>
+        
+                    
+                        <div class="account-bowl">
+                            <h1 class="useful-head">MY ACCOUNT</h1>
+                            <ul>
+                                <li class="link-foot"><a href="#">Acount</a></li>
+                                <li class="link-foot"><a href="#">Order</a></li>
+                                <li class="link-foot"><a href="#">Addresses</a></li>
+                                
+                            </ul>
+                        </div>
+                        <div class="bb">
+                            <img src="https://mamaearthp.imgix.net/wysiwyg/Best-Brand500x5002x.png?auto=format
+                            " alt="#">
+                        </div>
+        
+            </div>
+        
+                 <div class="social-help">
+                    <h3 class="social-head">SHOW US SOME <span class="heart"><i class="fa-solid fa-heart"></i></span> ON SOCIAL MEDIA</h3>
+                 </div>
+                 <div class="social-img">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-square-instagram"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                    <i class="fa-brands fa-pinterest-p"></i>
+                    <i class="fa-regular fa-envelope"></i>
+                 </div>
+                 
+                 <div class="end">
+                    <h3 class="last-line">
+                        <span class="c">ⓒ</span> 2022 Honasa Consumer Pvt. Ltd. All Rights Reserved
+                    </h3>
+                 </div>
+        
+            </div>
+        
+        </div>
+            </footer>
+    <script>
+        // Write all the selectors here
+let subMenu = document.querySelector("#subMenu");
+
+// Fetch Data from Api
+const getProductData = async (index) => {
+    const response = await axios.get(`https://mmrth-nd-api.honasa-production.net/v1/categories/${index}/products`);
+    console.log(index);
+    return response.data;
+}
+
+
+
+
+
+function toggleMenu() {
+    subMenu.classList.toggle("open-menu");
+}
+
+// ----------------
+var input = document.querySelector(".input");
+const body = document.querySelector('body');
+const baby_modal = document.querySelector('.display-none');
+function babyData() {
+
+    baby_modal.style.display = 'flex';
+    beauty.style.display = 'none';
+    hair.style.display = 'none';
+    // setTimeout(() => {
+    //     baby_modal.style.display = 'none';
+    // }, 10000);
+}
+
+
+
+
+
+
+
+
+
+function babyDataRemove() {
+    baby_modal.style.display = 'none';
+}
+const beauty = document.querySelector('.beauty-display-none');
+function beautyData() {
+    baby_modal.style.display = 'none';
+    hair.style.display = 'none';
+    face.style.display = 'none';
+    beauty.style.display = 'flex';
+    setTimeout(() => {
+        beauty.style.display = 'none';
+    }, 10000);
+}
+
+const hair = document.querySelector('.hair-display-none');
+function hairData() {
+    baby_modal.style.display = 'none';
+    beauty.style.display = 'none';
+    face.style.display = 'none';
+    bodyData.style.display = 'none';
+    hair.style.display = 'flex';
+    setTimeout(() => {
+        hair.style.display = 'none';
+    }, 10000);
+}
+
+const face = document.querySelector('.face-display-none');
+function faceData() {
+    baby_modal.style.display = 'none';
+    beauty.style.display = 'none';
+    hair.style.display = 'none';
+    bodyData.style.display = 'none';
+    face.style.display = 'flex';
+    setTimeout(() => {
+        face.style.display = 'none';
+    }, 10000);
+}
+
+const bodyData = document.querySelector('.body-display-none');
+function bodyShowData() {
+    baby_modal.style.display = 'none';
+    beauty.style.display = 'none';
+    hair.style.display = 'none';
+    face.style.display = 'none';
+    bodyData.style.display = 'flex';
+    setTimeout(() => {
+        bodyData.style.display = 'none';
+    }, 10000);
+}
+        const liItem = document.querySelectorAll('ul li');
+        const divItem = document.querySelectorAll('.product div');
+        const gur = document.querySelector(".gurgoan");
+
+        liItem.forEach(li => {
+            gur.style.display = "block"
+            li.onclick = function() {
+                //Filter
+                const value = li.textContent;
+                divItem.forEach(div => {
+                    div.style.display = 'none';
+
+                    if (div.getAttribute('data-filter') == value.toLowerCase()) {
+                        div.style.display = 'block';
+                    }
+                })
+            }
+        });
+    </script>
+</body>
+
+</html>

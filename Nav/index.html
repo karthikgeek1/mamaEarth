@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/10255ec4b4.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <!-- Nav Part One---------------------------- -->
+        <nav class="nav1">
+            <div>
+                <a href="">Asia's 1st Brand with MADE SAFE Certified Products<a>
+            </div>
+            <div>
+                <a href="">Get 3 Bestsellers FREE on Orders Above Rs. 499 Today | Use Code - BEST3 | Shop Now</a>
+            </div>
+            <div>
+                <a href=""><i class="fa-solid fa-users"></i></a>
+            </div>
+            </ul>
+        </nav>
+
+
+        <!-- Nav Part Two------------------------------------ -->
+
+
+
+        <nav class="nav2">
+            <div>
+                <img src="https://mamaearthp.imgix.net/wysiwyg/mamaearth-logo.png?auto=format&fit=scale" alt="Error"
+                    class="logo1">
+            </div>
+            <div class="serach">
+                <i class="fa-solid fa-magnifying-glass" id="glass"></i>
+                <input type="search" placeholder="Search For Face Mask " class="input" onclick="movieSearch()">
+                <button class="btn"><i class="fa-solid fa-magnifying-glass" id="magnify"></i>Search</button>
+            </div>
+            <div>
+                <img src="https://mamaearth-production.imgix.net/vip-desktop-join.gif" alt="" class="forest">
+            </div>
+            <div class="icon">
+                <i class="fa-solid fa-cart-arrow-down" id="icon"></i> <label>Cart</label>
+            </div>
+            <div class="icon">
+                <i class="fa-regular fa-circle-user" id="icon"></i> <label class="logedname" onmouseover="toggleMenu()"
+                    id="loggeduser">
+
+                </label>
+            </div>
+
+
+
+            <!-- --------hover------------------------   -->
+
+
+            <div class="sub-menu-wrap" id="subMenu" onmouseleave="toggleMenuRemove()">
+                <div class="sub-menu">
+                    <div class="user-info">
+                        <a href="/yourProfile/profile.html" class=".profile">
+                            <li> <i class="fa-regular fa-user" id="popup"></i> &nbsp; Your Profile </li>
+                        </a>
+                        <hr>
+                        <li><i class="fa-solid fa-cart-shopping" id="popup"></i> &nbsp;Your Orders</li>
+                        <hr>
+                        <li class="third"><i class="fa-solid fa-gift" id="popup"> </i>
+                            <h3 class="good"> <span class="goodness">gôodness</span> <span
+                                    class="insider">ìnsider</span>
+                            </h3> <br><span class="order">Something New
+                                Orders</span>
+                        </li>
+                        <hr>
+                        <li><i class="fa-solid fa-location-dot" id="popup"></i> &nbsp; Manage Address</li>
+                        <hr>
+                        <li><i class="fa-solid fa-phone" id="popup"></i> &nbsp;Contact US</li>
+                        <hr>
+                        <li><button class="logbut" onclick="login()" id="isLogin">LOGIN</button></li>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+
+
+        <nav>
+            <div class="nav" onmouseleave="babyDataRemove()">
+                <div class="menu">
+                    <a href="">HOME</a>
+                    <div class="baby" style="display: inline-block;" onmouseover="babyData()">
+                        <a href="" id="baby">BABY</a>
+                        <div class="baby-modal display-none" onmouseleave="babyDataRemove()">
+                            <div class="left">
+                                <a href="" style="color: black; font-size: 17px;">Explore</a>
+                                <a href="">New Launches</a>
+                                <a href="">Best Seller</a>
+                                <a href="">Combos</a>
+                                <a href="">Gift Packs</a>
+                            </div>
+                            <div class="center">
+                                <a href="" style="color: black; font-size: 17px;">Baby</a>
+                                <a href="">Baby Sampoo</a>
+                                <a href="">Baby Oralcare</a>
+                                <a href="">Baby Skin</a>
+                                <a href="">Baby Oil</a>
+                                <a href="">Baby Bath</a>
+                            </div>
+                            <div class="right">
+                                <a href="">See All</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="beauty" style="display: inline-block;" onmouseenter="beautyData()">
+                        <a href="#">BEAUTY</a>
+                        <div class="baby-modal beauty-display-none" onmouseleave="babyDataRemove()">
+                            <div class="left">
+                                <a href="" style="color: black; font-size: 17px;">Explore</a>
+                                <a href="">New Launches</a>
+                                <a href="">Best Seller</a>
+                                <a href="">Combos</a>
+                                <a href="">Gift Packs</a>
+                            </div>
+                            <div class="center">
+                                <a href="" style="color: black; font-size: 17px;">Beauty</a>
+                                <a href="">Face</a>
+                                <a href="">Hair</a>
+                                <a href="">Body</a>
+
+                            </div>
+                            <div class="right">
+                                <a href="">See All</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="beauty" style="display: inline-block;" onmouseenter="hairData()">
+                        <a href="#">HAIR</a>
+                        <div class="baby-modal hair-display-none" onmouseleave="babyDataRemove()">
+                            <div class="left">
+                                <a href="" style="color: black; font-size: 17px;">Explore</a>
+                                <a href="">New Launches</a>
+                                <a href="">Best Seller</a>
+                                <a href="">Combos</a>
+                                <a href="">Gift Packs</a>
+                            </div>
+                            <div class="center">
+                                <a href="" style="color: black; font-size: 17px;">Hair</a>
+                                <a href="">Hair Sampoo</a>
+                                <a href="">Hair Conditioner</a>
+                                <a href="">Hair Oil</a>
+                                <a href="">Hair Mask</a>
+                                <a href="">Hair Serum</a>
+
+                            </div>
+                            <div class="right">
+                                <a href="">See All</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="face" style="display: inline-block;" onmouseenter="faceData()">
+                        <a href="#">FACE</a>
+                        <div class="baby-modal face-display-none" onmouseleave="babyDataRemove()">
+                            <div class="left">
+                                <a href="" style="color: black; font-size: 17px;">Explore</a>
+                                <a href="">New Launches</a>
+                                <a href="">Best Seller</a>
+                                <a href="">Combos</a>
+                                <a href="">Gift Packs</a>
+                            </div>
+                            <div class="center">
+                                <a href="" style="color: black; font-size: 17px;">Face</a>
+                                <a href="">Face Wash</a>
+                                <a href="">Face Mask</a>
+                                <a href="">Face Cream</a>
+                                <a href="">Face Serum</a>
+                                <a href="">Facr Scrub</a>
+                                <a href="">Face Toner</a>
+                                <a href="">Face Gel</a>
+                                <a href="">Face Sheet Mask</a>
+                                <a href="">Face Moisturiser</a>
+
+                            </div>
+                            <div class="right">
+                                <a href="">See All</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="body" style="display: inline-block;" onmouseenter="bodyShowData()">
+                        <a href="#">BODY</a>
+                        <div class="baby-modal body-display-none" onmouseleave="babyDataRemove()">
+                            <div class="left">
+                                <a href="" style="color: black; font-size: 17px;">Explore</a>
+                                <a href="">New Launches</a>
+                                <a href="">Best Seller</a>
+                                <a href="">Combos</a>
+                                <a href="">Gift Packs</a>
+                            </div>
+                            <div class="center">
+                                <a href="" style="color: black; font-size: 17px;">Body</a>
+                                <a href="">Body Wash</a>
+                                <a href="">Body Scrub</a>
+                                <a href="">Face Cream</a>
+                                <a href="">Face Lotion</a>
+
+                            </div>
+                            <div class="right">
+                                <a href="">See All</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="/gift/gift.html">GIFT PACKS</a>
+                    <a href="/Allproducts/Allproducts.html">ALL PRODUCTS</a>
+                    <a href="/Blog/index.html">BLOG</a>
+                    <a href="/Plant Goodness/index.html">PLANT GOODNESS</a>
+                    <a href="/store/store.html">STORE LOCATOR</a>
+
+                </div>
+            </div>
+
+        </nav>
+
+    </header>
+
+
+
+
+    <!-- main section is started from here  -->
+    <main>
+        <div class="banner">
+            <img src="https://images.ctfassets.net/66mrrren2unf/5p5pVTewrOIcFmKeO0vbEP/e5231799d3125147c283a13ca28caec7/3.jpg?q=40"
+                alt="Error" class="banner">
+        </div>
+        <div class="container">
+
+        </div>
+    </main>
+
+
+
+
+    <!---------------------------------------------------- LOG IN ----------------------------------------------------------->
+
+    <div class="login_popup_main_container">
+        <div class="login_popup">
+            <button id="cross" onclick="loginPopupRemove()"><i class="fa-sharp fa-solid fa-xmark"></i></button>
+            <!-- <form action=""> -->
+            <div class="login_heading">
+                <h1>Log In To Get Started</h1>
+
+            </div>
+            <div class="ligin_mamacash">
+                <img src="../Nav/mamacash-banner-2x.png" alt="" width="350px" height="80px">
+            </div>
+            <div class="login_img_text">
+                <div class="login_img">
+                    <img src="./login.svg" alt="" width="50px" height="50px">
+                </div>
+                <div class="login_text">
+                    Get access to your orders, track previous order & Redeem Mama Cash
+                </div>
+            </div>
+            <div class="login_input">
+                <input type="text" name="" id="login_input" placeholder="Enter Tour Number..." required>
+            </div>
+            <div class="login_term_condition">
+                By Continuing, You agree to Mamaearth's <a href="">Terms and Conditions </a> and <a href="">Privacy
+                    Policy</a>
+            </div>
+            <div class="login_with_otp_container">
+                <button id="login_with_otp" class="login_with_otp" onclick="loginWithOtp()">LOGIN WITH OTP</button>
+                <button id="continue_as_guest" class="login_with_otp">CONTINUE AS GUEST</button>
+            </div>
+            <!-- </form> -->
+        </div>
+    </div>
+
+
+    <!---------------------------- SIGN UP -------------------------->
+
+    <div class="signup_popup">
+        <div class="signup_heading">
+            <button id="signup_left_arrow"><i class="fa-solid fa-arrow-left-long" onclick="backToLogin()"></i></button>
+            <h2>Signup for the goodness inside</h2>
+        </div>
+        <!-- <form action=""> -->
+        <div class="signup_input">
+            <input type="text" name="" id="signup_phone_number" readonly>
+        </div>
+        <div class="signup_input">
+            <input type="text" name="" id="signup_first_name" placeholder="First Name*" required>
+        </div>
+        <div class="signup_input">
+            <input type="text" name="" id="signup_last_name" placeholder="Last Name*" required>
+        </div>
+        <div class="signup_input">
+            <input type="email" name="" id="signup_email_id" placeholder="Email ID*" required>
+        </div>
+        <div class="signup_gender">
+            <h3>Gender</h3>
+              <input type="radio" id="male" name="Gender">
+              <label for="male">Male</label>
+              <input type="radio" id="female" name="Gender">
+              <label for="female">Female</label>
+              <input type="radio" id="not_specified" name="Gender">
+              <label for="not_specified">Not Specified</label>
+        </div>
+        <div class="signup_input">
+            <input type="text" name="" id="signup_dob" placeholder="DD/MM/YYYY" required>
+        </div>
+        <button id="signup_btn">SIGN UP</button>
+        <!-- </form> -->
+    </div>
+
+
+    <!---------------------- SIGN IN ------------------->
+
+    <div class="signin_popup">
+        <button id="signin_cross"><i class="fa-sharp fa-solid fa-xmark"></i></button>
+        <div class="signin_heading">
+            <h2>Sign In To Continue...</h2>
+        </div>
+        <div class="signin_email">
+            <input type="text" name="" id="signin_email" placeholder="Enter your email...">
+        </div>
+        <button id="signin_btn">SIGN IN</button>
+    </div>
+
+    <!------------------------------- LOG OUT ----------------------->
+    <div class="logout_popup">
+        <button id="logout"><i class="fa-sharp fa-solid fa-check"></i></button>
+        <h2 class="logout">Sussessfully Logout</h2>
+    </div>
+
+
+    <!-- -------------------------- cart-------
+    <div class="cart_ITEM">
+
+        <div class="cart_content">
+            <div class="cart_content1">
+                <i class="fa-solid fa-arrow-left" id="mycarticon"> &nbsp; My Cart</i>
+            </div>
+            <div class="cart_content2">
+                <div class="content2cart">
+                    <img src="/images/cart-offer-2.gif" alt="">
+                    <div id="s1">
+                        <h5> Buy 1 Get 1 Free</h5>
+                    </div>
+                    <div id="s2">
+                        <p>Add Minimum 2 products to Cart | Lower Priced Product Will be FREE | Not Applicable on
+                            Kits & Diapers</p>
+                    </div>
+                    <div class="coupan">
+                        <div class="coupan_applied">Coupan Applied</div>
+                        <div class="coupon-code">OMG</div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="cart_content3">
+
+            </div>
+        </div>
+    </div> -->
+    <footer>
+        <div class="footer">
+            <div class="footer-bowl">
+
+                <!-- First row start from below -->
+                <div id="first-col">
+                    <div class="shiping">
+                        <img class="imgtruck" src="https://mamaearthp.imgix.net/wysiwyg/delivery2x.png?auto=format
+                " alt="#">
+                        <h3 class="free-head">Free Shiping</h4>
+                            <p class="mb-1">On Order Above Rs.399</p>
+                    </div>
+
+                    <div class="cod-bowl">
+                        <img class="imgtruck" src="https://mamaearthp.imgix.net/wysiwyg/Group_81512x.png?auto=format"
+                            alt="#">
+                        <h3 class="cod-head">COD Available</h3>
+                        <p class="mb-1">@ Rs.40 Per Order</p>
+                    </div>
+
+                    <div class="contactus-bowl">
+                        <h2>Have Queries or Concerns?</h2>
+                        <button id="contact-btn" class="mb-1">CONTACT US</button>
+                    </div>
+                </div>
+                <!--  Second row start from below -->
+                <div class="payment-certificate">
+                    <div class="payment-bowl">
+
+                        <div class opetion-card>
+                            <h3 class="head">PAYMENT</h3> <br>
+                            <h4 class="head2"><span><img class="img1"
+                                        src="https://mamaearthp.imgix.net/wysiwyg/noun_trusted_27146262x_6Ekja92.png?auto=format"
+                                        alt="#"></span>100% Payment Protection, Easy Return Policy</h4>
+                            <img class="card"
+                                src="	https://mamaearthp.imgix.net/wysiwyg/master_card2x.png?auto=format&fit=scale"
+                                alt="#">
+                            <img class="card"
+                                src="	https://mamaearthp.imgix.net/wysiwyg/american_express2x.png?auto=format&fit=scale "
+                                alt="#">
+                            <img class="card"
+                                src="https://mamaearthp.imgix.net/wysiwyg/rupay2x.png?auto=format&fit=scale" alt="#">
+                            <img class="card"
+                                src="	https://mamaearthp.imgix.net/wysiwyg/net_banking2x.png?auto=format&fit=scale"
+                                alt="#">
+                            <img class="card"
+                                src="https://mamaearthp.imgix.net/wysiwyg/visa2x.png?auto=format&fit=scale" alt="#">
+                        </div>
+                    </div>
+
+                    <div class="certificate-bowl">
+                        <div class="dermato">
+                            <img class="dermato-img"
+                                src="	https://mamaearthp.imgix.net/wysiwyg/dermatology-tested-100x1002x.png?auto=format "
+                                alt="#">
+                            <p class="dermato-p">Dermatologically Tested</p>
+                        </div>
+
+                        <div class="fda">
+                            <img class="fda-img"
+                                src="https://mamaearthp.imgix.net/wysiwyg/fda-100x1002x.png?auto=format" alt="#">
+                            <p class="fda-p">FDA Approved</p>
+                        </div>
+
+                        <div class="safe">
+                            <img class="safe-img"
+                                src="https://mamaearthp.imgix.net/wysiwyg/MadeSafeImages13Jan/madesafe13janlogo.png?auto=format"
+                                alt="#">
+                            <p class="safe-p">Made Safe Certified</p>
+                        </div>
+
+                        <!-- <div class="cruelty">
+                    <img class="cruelty-img" src="https://mamaearthp.imgix.net/wysiwyg/cruelty-free_SjVJgQA.png?auto=format" alt="#">
+                    <p class="cruelty-p">Cruelty Free</p>
+                </div> -->
+                    </div>
+                </div>
+                <!-- IMPROTANT link ROW start from below -->
+
+                <div class="imp-link">
+
+                    <div class="useful-bowl">
+                        <h1 class="useful-head">USEFUL LINKS</h1>
+                        <ul>
+                            <li class="link-foot"><a href="#">Privacy Policy</a></li>
+                            <li class="link-foot"><a href="#">Returns</a></li>
+                            <li class="link-foot"><a href="#">Terms&Conditions</a></li>
+                            <li class="link-foot"><a href="#">Terms&Conditions-Cashback</a></li>
+                            <li class="link-foot"><a href="#">FAQs</a></li>
+                            <li class="link-foot"><a href="#">We're Safe</a></li>
+                            <li class="link-foot"><a href="#">Track Order</a></li>
+                            <li class="link-foot"><a href="#">Contact Us</a></li>
+                            <li class="link-foot"><a href="#">Sitemap</a></li>
+                            <li class="link-foot"><a href="#">About Us</a></li>
+                        </ul>
+                    </div>
+
+
+                    <div class="category-bowl">
+                        <h1 class="useful-head">CATEGORIES</h1>
+                        <ul>
+                            <li class="link-foot"><a href="#">Baby</a></li>
+                            <li class="link-foot"><a href="#">Beauty</a></li>
+                            <li class="link-foot"><a href="#">Hair</a></li>
+                            <li class="link-foot"><a href="#">Face</a></li>
+                            <li class="link-foot"><a href="#">Body</a></li>
+                            <li class="link-foot"><a href="#">Gift Pack</a></li>
+                        </ul>
+                    </div>
+
+
+                    <div class="account-bowl">
+                        <h1 class="useful-head">MY ACCOUNT</h1>
+                        <ul>
+                            <li class="link-foot"><a href="#">Acount</a></li>
+                            <li class="link-foot"><a href="#">Order</a></li>
+                            <li class="link-foot"><a href="#">Addresses</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="bb">
+                        <img src="https://mamaearthp.imgix.net/wysiwyg/Best-Brand500x5002x.png?auto=format
+                            " alt="#">
+                    </div>
+
+                </div>
+
+                <div class="social-help">
+                    <h3 class="social-head">SHOW US SOME <span class="heart"><i class="fa-solid fa-heart"></i></span> ON
+                        SOCIAL MEDIA</h3>
+                </div>
+                <div class="social-img">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-square-instagram"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                    <i class="fa-brands fa-pinterest-p"></i>
+                    <i class="fa-regular fa-envelope"></i>
+                </div>
+
+                <div class="end">
+                    <h3 class="last-line">
+                        <span class="c">ⓒ</span> 2022 Honasa Consumer Pvt. Ltd. All Rights Reserved
+                    </h3>
+                </div>
+
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+<script src="app.js"></script>
+<script>
+    document.getElementById("loggeduser").innerHTML = getLoggedInUserData()
+    let isLogged = isUserLoggedIn()
+    if (isLogged) {
+        document.getElementById("isLogin").innerHTML = "Log out"
+    }
+    else {
+        document.getElementById("isLogin").innerHTML = "LOGIN"
+    }
+</script>
+
+</html>
