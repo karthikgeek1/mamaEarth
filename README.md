@@ -26,7 +26,4 @@ etc..
 <h3> Help & Support -:</h3>
 <p> We Get a Big Support By Our Mentors & Our Team , Where we stuck our mentors are there with us and keep eye on our project. A big thanks to them </p>
 
-<h1>output:</h1>
-![image](https://user-images.githubusercontent.com/104209441/190214762-b438fdda-7937-45ee-9677-8f087ab962e4.png)
-
 
