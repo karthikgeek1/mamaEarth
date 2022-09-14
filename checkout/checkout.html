@@ -64,7 +64,6 @@
         }
         console.log(total)
         bill.innerHTML=`Total bill: $${total}`
-        cart=null
         bill.addEventListener("click",()=>{
             alert(`paid the bill ${total}`)
         })
@@ -73,9 +72,10 @@
             if(fname.value==""||lname.value==""||email.value==""||address.value==""){
                 alert("please enter your details properly")
             }
-                alert("pay the bill")
-        
+            alert("pay the bill")
+            
         })
+        cart=null
     </script>
 </body>
 
