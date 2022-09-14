@@ -238,67 +238,7 @@ function isUserLoggedIn(){
     return false;
   }
 }
-//========================== add to cart feature============================================/
 
-
-// document.querySelector(".icon").addEventListener("click", function () {
-  //   document.querySelector(".cart_ITEM").style.display = "flex";
-  // });
-  
-  // document.querySelector("#mycarticon").addEventListener("click", function () {
-    //   document.querySelector(".cart_ITEM").style.display = "none";
-    // });
-    
-    // function add_to_cart(e) {
-      //   // console.log(e.target);
-      //   console.log(e.target.id);
-      //   var cart_content3 = document.querySelector(".cart_content3");
-      //   fetch("https://mmrth-nd-api.honasa-production.net/v1/categories/2/products")
-      //     .then((re) => re.json())
-      //     .then((dat) => {
-        //       // console.log(dat);
-        //       // console.log(e.target.id);
-        //       console.log("equal hai");
-        //       dat.bestsellers.map((item) => {
-          //         let idvalue = item.id;
-  //         console.log(idvalue);
-  
-  //         if (idvalue == e.target.id) {
-  //           c = `<div class="cart_data">
-  //             <img src=${item.images[0]} alt="mamaearth" class="cart_image_name">
-  //             <p class="image_name" >${item.name}</p>
-  //             <p class="price_name" > Rs.${item.price}</p>
-  //             // <button class="deletebutton" onclick="deleteData(event)">Delete Item</button>
-  //             `;
-  //           // console.log("item", item);
-  //           localStorage.setItem("itemValues", item);
-  //           cart_content3.innerHTML += c;
-  //           console.log(c);
-  //         }
-  //       });
-  //     });
-  //   console.log("jwhdjkwfkfkwsggwbjs");
-  //   const cart_data = document.querySelector(".cart");
-  // }
-  // // }
-  // function deleteData() {
-  //   console.log("WOrkin");
-  // }
-
-  // ================================================cart============================================
-// let cartItems=[]
-//   function add_to_cart(e){
-//     console.log("cart id", e.target.id);
-//     fetch("https://mmrth-nd-api.honasa-production.net/v1/categories/31/products").then(res=>res.json())
-//     .then(data=>data.bestsellers.map((item)=>{
-//       let idValue = item.id
-//       // console.log(idValue);
-//       if(e.target.id.includes(idValue)){
-//         cartItems.push(item)
-//         localStorage.setItem("cartitems", JSON.stringify(cartItems))
-//       }
-//     }))
-//   }
 
   // ===============================details section =======================================/
 
@@ -351,4 +291,44 @@ function movieSearch(){
       
   }).catch(err=>alert("item not found"))
   
+}
+
+// =====================cart===========
+document.querySelector(".icon").addEventListener("click", function () {
+  document.querySelector(".cart_ITEM").style.display = "flex";
+});
+
+document.querySelector("#mycarticon").addEventListener("click", function () {
+  document.querySelector(".cart_ITEM").style.display = "none";
+});
+let cart_content3 = document.querySelector(".cart_content3");
+let cartArr=[]
+function add_to_cart(e){
+  console.log(e.target.id);
+  fetch("https://mmrth-nd-api.honasa-production.net/v1/categories/31/products").then(res=>res.json())
+  .then(data=>data.bestsellers.map((item)=>{
+    let iddval = item.id
+    if(e.target.id.includes(iddval)){
+      html=`<div class="cart_data" id="cont${iddval}" >
+      <img src=${item.images[0]} alt="mamaearth" class="cart_image_name">
+      <p class="image_name" >${item.name}</p>
+      <p class="price_name" > Rs.${item.price}</p>
+       <button class="deletebutton" id=${iddval} onclick="deleteData(event)">Drop</button>`
+       cart_content3.innerHTML+=html
+       cartArr.push(item)
+       localStorage.setItem("cartCheckout", JSON.stringify(cartArr))
+       console.log(cartArr);
+    }
+  }))
+}
+
+function deleteData(e) {
+  // console.log(cartData);
+  for (let i = 0; i < cartArr.length; i++) {
+    if (cartArr[i].id == e.target.id) {
+      cartArr.splice(i,1)
+      e.target.parentElement.remove()
+      localStorage.setItem("cartCheckout", JSON.stringify(cartArr))
+    }
+  }
 }

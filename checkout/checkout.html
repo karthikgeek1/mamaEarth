@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="checkout.css">
+</head>
+
+<body>
+    <div class="mama">
+        <img src="https://mamaearthp.imgix.net/wysiwyg/mamaearth-logo.png?auto=format&fit=scale" alt="" class="mama">
+    </div>
+    <div class="main-container">
+        <div class="subcont1">
+            <h1>Delivery Address</h1>
+            <form action="">
+                <div class="usernames">
+                    <!-- <input type="text" name="" id="uname"> -->
+                    <input type="text" name="" id="fname" placeholder="firstname">
+                    <input type="text" name="" id="lname" placeholder="lastname">
+                </div>
+                <div class="email">
+                    <input type="text" id="Email" placeholder="email">
+                    <input type="text" id="Address" placeholder="Address">
+                </div>
+                <button class="butn">submit</button>
+            </form>
+        </div>
+        <div class="subcont2">
+            <!-- <div class="mini">
+                <img src="https://m.media-amazon.com/images/I/513nPRdxuQL._SX679_.jpg" alt="">
+                <h3>onion shampoo ashdau</h3>
+                <h3>399rs</h3>
+                <h3 class="h3">qyt1</h3>
+            </div> -->
+        </div>
+    </div>
+    <button class="bill"></button>
+    <script>
+        let cart = JSON.parse(localStorage.getItem('cartCheckout'))
+        console.log(cart)
+        let sub = document.querySelector(".subcont2")
+        let bill = document.querySelector(".bill")
+        cart.map((item) => {
+            html=`<div class="mini">
+                <img src=${item.images[0]} alt="">
+                <p>${item.name}</p>
+                <h3>$${item.price}</h3>
+            </div><hr>`
+            console.log(item)
+            sub.innerHTML+=html
+        })
+        let total=0;
+        for(let i=0; i<cart.length; i++){
+            total+=parseInt(cart[i].price)
+        }
+        console.log(total)
+        bill.innerHTML=`Total bill: ${total}`
+        cart=null
+    </script>
+</body>
+
+</html>

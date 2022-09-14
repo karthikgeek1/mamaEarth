@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+.usernames{
+    display: flex;
+    justify-content: space-around;
+    height: 100px;
+    width: 500px;
+    align-items: center;
+}
+.mama{
+    text-align: center;
+}
+.email{
+    display: flex;
+    justify-content: space-around;
+    height: 100px;
+    width: 500px;
+    align-items: center;
+}
+h1{
+    /* position: relative; */
+    /* left: 100px; */
+    font-family: 'Roboto';
+}
+.butn {
+    height: 30px;
+    width: 200px;
+    border: 2px solid rgb(13, 175, 228);
+    color: rgb(13, 175, 228);
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background-color: rgb(13, 175, 228);
+    position: relative;
+    left: 120px;
+    top: 30px;
+  }
+  .main-container{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .subcont1{
+    height: 100vh;
+    width: 60vw;
+    border: 1px solid black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: beige;
+  }
+  input{
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  .subcont2{
+    height: 100vh;
+    width: 30vw;
+    border: 1px solid black;
+    border-radius: 10px;
+    overflow-y: scroll;
+  }
+
+  .mini{
+    height: 100px;
+    width: 30vw;
+    display: flex;
+    justify-content: space-around;
+    /* border: 1px solid black; */
+    border-radius: 5px;
+    background-color: aliceblue;
+    margin-top: 10px;
+  }
+.bill{
+    height: 50px;
+    width:30vw;
+    background-color: rgb(11, 183, 240);
+    position: relative;
+    bottom: 50px;
+    left: 67.5vw;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: white;
+}
