@@ -72,8 +72,9 @@ h1{
     justify-content: space-around;
     /* border: 1px solid black; */
     border-radius: 5px;
-    background-color: aliceblue;
+    /* background-color: aliceblue; */
     margin-top: 10px;
+    /* overflow-y: hidden; */
   }
 .bill{
     height: 50px;

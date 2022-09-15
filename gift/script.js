@@ -58,7 +58,7 @@ function bodyShowData() {
 
 const data_fetch = document.querySelector(".data_fetch");
 window.addEventListener("DOMContentLoaded", () => {
-  fetch("https://mmrth-nd-api.honasa-production.net/v1/categories/2/products")
+  fetch("https://mmrth-nd-api.honasa-production.net/v1/categories/5/products")
     .then((res) => res.json())
     .then((data) => {
       console.log(data);
@@ -66,7 +66,7 @@ window.addEventListener("DOMContentLoaded", () => {
         // console.log(item);
         html = `<div class="g1">
             <div class="gift_logo">Best seller</div>
-            <img src=${item.images[0]} alt="mamaearth" class="p_img">
+            <img src=${item.images[0]} alt="mamaearth" class="p_img" onclick="display(event)" id="p_${item.id}">
             <p class="cont">${item.name}</p>
             <p class="cont"><i class="fa-solid fa-star rate"></i>${(5 * parseInt(item.avg_rating_percent)) / 100}<span> | ${item.review_count}<span></p>
             <p class="cont"> Rs.${item.price}</p>
@@ -81,7 +81,7 @@ window.addEventListener("DOMContentLoaded", () => {
 let details=[]
 function display(e){
   console.log(e.target.id);
-  fetch("https://mmrth-nd-api.honasa-production.net/v1/categories/2/products")
+  fetch("https://mmrth-nd-api.honasa-production.net/v1/categories/5/products")
   .then((res)=>res.json()).then(data=>data.bestsellers.map((item)=>{
     let iddval = item.id
     // details=null
@@ -97,7 +97,7 @@ function display(e){
 function movieSearch(){
   let inputvalue = document.querySelector('.input').value;
 // console.log(inputvalue)
-  fetch("https://mmrth-nd-api.honasa-production.net/v1/categories/2/products")
+  fetch("https://mmrth-nd-api.honasa-production.net/v1/categories/5/products")
     .then((res) => res.json())
     .then((data) => {
       // console.log(data);
@@ -115,7 +115,7 @@ function movieSearch(){
         <p class="cont">${item.name}</p>
         <p class="cont"><i class="fa-solid fa-star rate"></i>${(5 * parseInt(item.avg_rating_percent)) / 100}<span> | ${item.review_count}<span></p>
         <p class="cont"> Rs.${item.price}</p>
-        <button id=${item.id}  class="gift_btn">Add to cart</button>
+        <button id=${item.id}  class="gift_btn" onclick="add_to_cart(event)">Add to cart</button>
         </div>`;
       })
 
@@ -136,7 +136,7 @@ let cart_content3 = document.querySelector(".cart_content3");
 let cartArr=[]
 function add_to_cart(e){
   console.log(e.target.id);
-  fetch("https://mmrth-nd-api.honasa-production.net/v1/categories/2/products").then(res=>res.json())
+  fetch("https://mmrth-nd-api.honasa-production.net/v1/categories/5/products").then(res=>res.json())
   .then(data=>data.bestsellers.map((item)=>{
     let iddval = item.id
     if(e.target.id.includes(iddval)){
