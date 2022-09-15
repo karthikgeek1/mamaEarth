@@ -70,7 +70,7 @@ window.addEventListener("DOMContentLoaded", () => {
             <p class="cont">${item.name}</p>
             <p class="cont"><i class="fa-solid fa-star rate"></i>${(5 * parseInt(item.avg_rating_percent)) / 100}<span> | ${item.review_count}<span></p>
             <p class="cont"> Rs.${item.price}</p>
-            <button id=${item.id}  class="gift_btn">Add to cart</button>
+            <button id=${item.id}  class="gift_btn" onclick="add_to_cart(event)">Add to cart</button>
             </div>`;
         data_fetch.innerHTML += html;
       });
@@ -122,4 +122,44 @@ function movieSearch(){
       
   })
   
+}
+// =====================cart===================
+
+document.querySelector(".icon").addEventListener("click", function () {
+  document.querySelector(".cart_ITEM").style.display = "flex";
+});
+
+document.querySelector("#mycarticon").addEventListener("click", function () {
+  document.querySelector(".cart_ITEM").style.display = "none";
+});
+let cart_content3 = document.querySelector(".cart_content3");
+let cartArr=[]
+function add_to_cart(e){
+  console.log(e.target.id);
+  fetch("https://mmrth-nd-api.honasa-production.net/v1/categories/2/products").then(res=>res.json())
+  .then(data=>data.bestsellers.map((item)=>{
+    let iddval = item.id
+    if(e.target.id.includes(iddval)){
+      html=`<div class="cart_data" id="cont${iddval}" >
+      <img src=${item.images[0]} alt="mamaearth" class="cart_image_name">
+      <p class="image_name" >${item.name}</p>
+      <p class="price_name" > Rs.${item.price}</p>
+       <button class="deletebutton" id=${iddval} onclick="deleteData(event)">Drop</button>`
+       cart_content3.innerHTML+=html
+       cartArr.push(item)
+       localStorage.setItem("cartCheckout", JSON.stringify(cartArr))
+       console.log(cartArr);
+    }
+  }))
+}
+
+function deleteData(e) {
+  // console.log(cartData);
+  for (let i = 0; i < cartArr.length; i++) {
+    if (cartArr[i].id == e.target.id) {
+      cartArr.splice(i,1)
+      e.target.parentElement.remove()
+      localStorage.setItem("cartCheckout", JSON.stringify(cartArr))
+    }
+  }
 }
