@@ -303,6 +303,9 @@ document.querySelector("#mycarticon").addEventListener("click", function () {
 });
 let cart_content3 = document.querySelector(".cart_content3");
 let cartArr=[]
+if(localStorage.getItem('cartCheckout')){
+  cartArr=JSON.parse(localStorage.getItem('cartCheckout'))
+}
 function add_to_cart(e){
   console.log(e.target.id);
   fetch("https://mmrth-nd-api.honasa-production.net/v1/categories/31/products").then(res=>res.json())

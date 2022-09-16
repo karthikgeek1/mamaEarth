@@ -386,7 +386,7 @@ p {
 /* ---------------------giftsection---------------------- / */
 
 .gift_image {
-    width: 1360px;
+    width: 100vw;
     height: auto;
 }
 
