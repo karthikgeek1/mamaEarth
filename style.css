@@ -1019,7 +1019,7 @@ p {
 }
 
 .cart_content3 {
-  height: 300px;
+  height: 55%;
   overflow-y: scroll;
 }
 
@@ -1114,9 +1114,9 @@ p {
   transition-duration: 1s;
   transition-delay: 0.1s;
   transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  position: relative;
-  top: 40px;
-  left: -20px;
+  position: absolute;
+  bottom: 30px;
+  right: 40px;
 }
 
 .Checkout:hover {
