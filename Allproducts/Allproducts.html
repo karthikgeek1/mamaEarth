@@ -90,7 +90,7 @@
         <nav>
             <div class="nav" onmouseleave="babyDataRemove()">
                 <div class="menu">
-                    <a href="/Nav/index.html">HOME</a>
+                    <a href="../index.html">HOME</a>
                     <div class="baby" style="display: inline-block;" onmouseenter="babyData()">
                         <a href="" id="baby">BABY</a>
                         <div class="baby-modal display-none">
@@ -249,11 +249,39 @@
 
             </div>
         </div>
+        <!-- ====================cart===================== -->
+        <div class="cart_ITEM ">
+
+            <div class="cart_content ">
+                <div class="cart_content1 ">
+                    <i class="fa-solid fa-arrow-left " id="mycarticon"> &nbsp; My Cart</i>
+                </div>
+                <div class="cart_content2 ">
+                    <div class="content2cart ">
+                        <img src="https://raw.githubusercontent.com/sameerddr/Mamaearth-Clone/sameer/images/cart-offer-2.gif" alt=" ">
+                        <div id="s1">
+                            <h5> Buy 1 Get 1 Free</h5>
+                        </div>
+                        <div id="s2">
+                            <p>Add Minimum 2 products to Cart | Lower Priced Product Will be FREE | Not Applicable on
+                                Kits & Diapers</p>
+                        </div>
+                        <div class="coupan ">
+                            <div class="coupan_applied ">Coupan Applied</div>
+                            <div class="coupon-code ">OMG</div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="cart_content3 ">
+
+                </div>
+                <div class="cart_content4 ">
+                    <a href="/checkout/checkout.html"><button class="Checkout">Checkout</button></a>
+                </div>
+            </div>
+        </div>
     </main>
-
-    <!-- =================================login=========================== -->
-
-    
 
 <!-- ========================================footer======================== -->
 
@@ -419,6 +447,10 @@
             document.getElementById("isLogin").innerHTML = "LOGIN"
         }
     </script> -->
+    <script>
+        const PAGE_TYPE = "products"
+    </script>
+    <script src="../cart.js"></script>
 </body>
 
 </html>

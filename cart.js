@@ -10,9 +10,15 @@ document.querySelector("#mycarticon").addEventListener("click", function () {
 let cart_content3 = document.querySelector(".cart_content3");
 function add_to_cart(e){
     console.log(e.target.id);
-    let category_id=31;
+    let category_id;
     if(PAGE_TYPE=="gift"){
         category_id=5;
+    }
+    else if(PAGE_TYPE=="products"){
+        category_id=21
+    }
+    else{
+        category_id=31
     }
     fetch(`https://mmrth-nd-api.honasa-production.net/v1/categories/${category_id}/products`).then(res=>res.json())
     .then(data=>data.bestsellers.map((item)=>{

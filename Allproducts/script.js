@@ -126,7 +126,7 @@ function createProdItemCard(data) {
             <p>${e.name}</p>
             <p class="para"><i class="fa-solid fa-star rate"></i>${5 * parseInt(e.avg_rating_percent) / 100}<span> | ${e.review_count} reviews</span></p>
             <p> Rs.${e.price}</p>
-            <button id=${e.id} class="butn">Add to cart</button>
+            <button id=${e.id} class="butn" onclick="add_to_cart(event)">Add to cart</button>
         </div>`
         productCont.innerHTML += prodItem
 
