@@ -292,6 +292,7 @@ select:focus {
   /* margin-left: 100px; */
   gap: 10px;
   padding-top: 80px;
+  
 }
 .c1 {
   height: 500px;
@@ -304,6 +305,7 @@ select:focus {
   justify-content: center;
   justify-content: space-around;
   margin-bottom: 10px;
+  cursor: pointer;
 }
 .img2 {
   width: 200px;

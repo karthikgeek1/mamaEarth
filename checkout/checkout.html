@@ -23,7 +23,7 @@
                     <input type="text" name="" id="lname" placeholder="lastname">
                 </div>
                 <div class="email">
-                    <input type="text" id="Email" placeholder="email">
+                    <input type="email" id="Email" placeholder="email">
                     <input type="text" id="Address" placeholder="Address">
                 </div>
             </form>
@@ -44,10 +44,11 @@
         let fname = document.getElementById("fname")
         let lname = document.getElementById("lname")
         let email = document.getElementById("Email")
-        let address = document.getElementById("address")
+        let address = document.getElementById("Address")
         console.log(cart)
         let sub = document.querySelector(".subcont2")
         let bill = document.querySelector(".bill")
+        let isAddFill = false
         let submit = document.querySelector(".butn")
         cart.map((item) => {
             html=`<div class="mini">
@@ -65,14 +66,23 @@
         console.log(total)
         bill.innerHTML=`Total bill: $${total}`
         bill.addEventListener("click",()=>{
-            alert(`paid the bill ${total}`)
+            if(isAddFill){
+                alert(`paid the bill $${total}`)
+            }
+            else{
+                alert('please fill your details')
+            }
         })
         submit.addEventListener("click", (e)=>{
             //e.preventDefault()
-            if(fname.value==""||lname.value==""||email.value==""||address.value==""){
+            var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            if(fname.value==""||lname.value==""||!(email.value.match(mailformat))||address.value==""){
                 alert("please enter your details properly")
             }
-            alert("pay the bill")
+            else{
+                alert('pls pay the bill')
+                isAddFill=true
+            }
             
         })
         cart=null
