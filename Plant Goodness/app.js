@@ -136,15 +136,6 @@ chatBotBtn.addEventListener("click", (event) => {
   imagesContainer.classList.add("images_container");
   paraImageContainer.append(imagesContainer);
 
-  const img1 = document.createElement("img");
-  img1.src = "1.jpg";
-  imagesContainer.append(img1);
-  const img2 = document.createElement("img");
-  img2.src = "2.jpg";
-  imagesContainer.append(img2);
-  const img3 = document.createElement("img");
-  img3.src = "3.jpg";
-  imagesContainer.append(img3);
 
   const downBtn = document.createElement("button");
   downBtn.setAttribute("id", "down_btn");
