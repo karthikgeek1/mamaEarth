@@ -568,7 +568,6 @@ p {
     display: flex;
     border-bottom: 1px solid black;
     margin: 10px;
-    overflow: auto;
 }
 
 .cart_image_name {

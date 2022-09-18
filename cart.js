@@ -40,7 +40,7 @@ function show_cart(){
     data.map((item)=>{
         html=`<div class="cart_data" id="cont${item.id}" >
       <img src=${item.images[0]} alt="mamaearth" class="cart_image_name">
-      <p class="image_name" >${item.name}</p>
+      <p class="image_name" >${(item.name).slice(0,50)}...</p>
       <p class="price_name" > Rs.${item.price}</p>
        <button class="deletebutton" id=${item.id} onclick="deleteData(event)">Drop</button>`
        cart_content3.innerHTML+=html
